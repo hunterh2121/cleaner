@@ -100,7 +100,7 @@ const BeforeAfterComparison = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <BeforeAfterSlider
           id="1"
-          beforeImage="/window-cleaning/before.jpg"
+          beforeImage="/before.jpg"
           afterImage="/window-cleaning/after.jpg"
         />
         <BeforeAfterSlider
