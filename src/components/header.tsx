@@ -10,7 +10,7 @@ const Header = () => {
   const handleNavigation = (section: string) => {
     if (["Review", "Gallery", "Services"].includes(section)) {
       if (location.pathname !== "/") {
-        // If we're not on the home page, navigate there first
+        // If we're not on the home page, navigate there firstaa
         navigate("/", { state: { scrollTo: section.toLowerCase() } });
       } else {
         // If we're already on the home page, just scroll
