@@ -18,12 +18,12 @@ const BeforeAfterSlider = ({
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
-    // Preload images
+    // Preload images with correct GitHub Pages paths
     const beforeImg = new Image();
     const afterImg = new Image();
 
-    beforeImg.src = `${import.meta.env.BASE_URL}${beforeImage}`;
-    afterImg.src = `${import.meta.env.BASE_URL}${afterImage}`;
+    beforeImg.src = beforeImage;
+    afterImg.src = afterImage;
 
     Promise.all([
       new Promise((resolve) => (beforeImg.onload = resolve)),
@@ -79,7 +79,9 @@ const BeforeAfterSlider = ({
 
   if (!imagesLoaded) {
     return (
-      <div className={`${height} flex items-center justify-center bg-gray-100`}>
+      <div
+        className={`${height} flex items-center justify-center bg-gray-100 rounded-lg`}
+      >
         <div className="animate-pulse text-gray-500">Loading images...</div>
       </div>
     );
@@ -100,7 +102,7 @@ const BeforeAfterSlider = ({
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-200"
         style={{
-          backgroundImage: `url(${import.meta.env.BASE_URL}${beforeImage})`,
+          backgroundImage: `url(${beforeImage})`,
           transform: isDragging ? "scale(1.02)" : "scale(1)",
         }}
       />
@@ -108,7 +110,7 @@ const BeforeAfterSlider = ({
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-200"
         style={{
-          backgroundImage: `url(${import.meta.env.BASE_URL}${afterImage})`,
+          backgroundImage: `url(${afterImage})`,
           clipPath: `inset(0 ${100 - position}% 0 0)`,
           transform: isDragging ? "scale(1.02)" : "scale(1)",
         }}
@@ -149,13 +151,13 @@ const BeforeAfterComparison = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <BeforeAfterSlider
             id="exterior"
-            beforeImage="before.jpg"
-            afterImage="after.jpg"
+            beforeImage="/window-cleaning/assets/before.jpg"
+            afterImage="/window-cleaning/assets/after.jpg"
           />
           <BeforeAfterSlider
             id="interior"
-            beforeImage="before1.jpg"
-            afterImage="after1.jpg"
+            beforeImage="/window-cleaning/assets/before1.jpg"
+            afterImage="/window-cleaning/assets/after1.jpg"
           />
         </div>
       </div>
