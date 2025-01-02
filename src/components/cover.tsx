@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
     <div className="relative">
       {/* Background Image */}
       <img
-        src="/cover.jpeg"
+        src="/window-cleaning/cover.jpeg"
         draggable="false"
         alt="Cover"
         className="w-full h-auto"

@@ -55,7 +55,7 @@ const Header = () => {
                 className="hover:scale-110 transform transition-transform duration-300 inline-block"
               >
                 <img
-                  src="/logo.png"
+                  src="/window-cleaning/before.jpg"
                   alt="BeachClean Logo"
                   className="h-10 w-auto"
                   draggable="false"
