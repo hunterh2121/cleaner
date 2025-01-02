@@ -11,7 +11,7 @@ function Home() {
   const location = useLocation();
 
   useEffect(() => {
-    // Check if we have a scrollTo target in the location state
+    // Check if we have a scrollTo target in the location statea
     if (location.state?.scrollTo) {
       setTimeout(() => {
         const element = document.getElementById(location.state.scrollTo);
