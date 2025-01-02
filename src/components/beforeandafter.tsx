@@ -101,12 +101,12 @@ const BeforeAfterComparison = () => {
         <BeforeAfterSlider
           id="1"
           beforeImage="/before.jpg"
-          afterImage="/window-cleaning/after.jpg"
+          afterImage="/after.jpg"
         />
         <BeforeAfterSlider
           id="2"
-          beforeImage="/window-cleaning/before1.jpg"
-          afterImage="/window-cleaning/after1.jpg"
+          beforeImage="/before1.jpg"
+          afterImage="/after1.jpg"
         />
       </div>
     </div>
